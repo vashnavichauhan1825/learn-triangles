@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>learn triangles</title>
+  </head>
+  <body>
+    <nav id="navigation-container">
+      <div id="heading">
+        <h1>Learn Triangles</h1>
+      </div>
+      <ul id="non-bullet-list">
+        <li id="list-item-inline"><a href="index.html">Play Quiz</a></li>
+        <li id="list-item-inline">
+          <a href="calcArea.html">Calculate Area</a>
+        </li>
+        <li id="list-item-inline">
+          <a href="calcHypo.html">Calculate Hypotenuse</a>
+        </li>
+        <li id="list-item-inline">
+          <a href="checkAngles.html">Check Whether Angles form a triangle</a>
+        </li>
+      </ul>
+    </nav>
+    <header id="heading-title">
+      <h2>Let's see whether angles form a triangle</h2>
+    </header>
+    <section id="angles-section">
+      <p class="example-msg">
+        Please input the measure of all the angles of triangle in degrees
+      </p>
+      <small class="example">For eg. For ▲ABC , input ∠A, ∠B, ∠C </small>
+      <form id="angles-form">
+        <input
+          type="number"
+          id="angleA"
+          min="1"
+          max="180"
+          required
+          placeholder="Enter angle 1 in degrees"
+        />
+
+        <input
+          type="number"
+          id="angleB"
+          min="1"
+          max="180"
+          required
+          placeholder="Enter angle 2 in degrees"
+        />
+
+        <input
+          type="number"
+          id="angleC"
+          min="1"
+          max="180"
+          required
+          placeholder="Enter angle 3 in degrees"
+        />
+        <button class="submitBtn">Calculate</button>
+      </form>
+      <div>
+        <h4 id="anglesSum"></h4>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-header">You can connect with me on</div>
+      <div class="social social-icons">
+        <a
+        target="_blank"
+        href="https://www.linkedin.com/in/vash-chauhan-b6222514b/"
+        ><i class="fab fa-linkedin-in fa-2x"></i
+      ></a>
+      <a target="_blank" href="https://twitter.com/VashnaviChauhan"
+        ><i class="fab fa-twitter fa-2x"></i
+      ></a>
+      <a target="_blank" href="https://github.com/vashnavichauhan1825"
+        ><i class="fab fa-github fa-2x"></i
+      ></a>
+      </div>
+      <p>&copy; 2022 | NEOCODER</p>
+    </footer>
+    <script src="checkAngles.js"></script>
+  </body>
+</html>

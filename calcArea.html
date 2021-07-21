@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>learn triangles</title>
+  </head>
+  <body>
+    <nav id="navigation-container">
+      <div id="heading">
+        <h1>Learn Triangles</h1>
+      </div>
+      <ul id="non-bullet-list">
+        <li id="list-item-inline"><a href="index.html">Play Quiz</a></li>
+        <li id="list-item-inline">
+          <a href="calcArea.html">Calculate Area</a>
+        </li>
+        <li id="list-item-inline">
+          <a href="calcHypo.html">Calculate Hypotenuse</a>
+        </li>
+        <li id="list-item-inline">
+          <a href="checkAngles.html">Check Whether Angles form a triangle</a>
+        </li>
+      </ul>
+    </nav>
+    <header id="heading-title">
+      <h2>Let's Calculate Area</h2>
+    </header>
+    <section id="area-section">
+      <p>Pick an option from below</p>
+      <label class="label"
+        ><input type="radio" required name="options" value="first" />
+        Area of a right angled triange (base and height known)
+        <span class="checkmark"></span
+      ></label>
+      <label class="label"
+        ><input type="radio" required name="options" value="second" /> Area of
+        an equilateral triange (all sides of triangle must be equal)
+        <span class="checkmark"></span
+      ></label>
+      <label class="label"
+        ><input type="radio" required name="options" value="third" /> Area of a
+        triange (with all 3 sides having different measures)
+        <span class="checkmark"></span
+      ></label>
+      <label class="label"
+        ><input type="radio" required name="options" value="four" /> Area of a
+        triange (with 2 sides and one angle known)
+        <span class="checkmark"></span
+      ></label>
+    </section>
+    <section id="outputContentOne">
+      <div class="output">
+        <h3>Area of a right angled triangle</h3>
+        <img src="/right-angled-triangle.png" alt="right-angle-triangle" />
+        <p>The formula to calculate the area of right angled triangle is</p>
+        <h4>Formula: 1/2 x base x height</h4>
+        <form class="calcArea">
+          <input
+            type="number"
+            class="base values"
+            min="1"
+            placeholder="Enter base"
+            required
+          />
+
+          <input
+            type="number"
+            class="height values"
+            min="1"
+            placeholder="Enter height"
+            required
+          />
+          <button class="calcAreaOne">Calculate</button>
+        </form>
+        <div>
+          <h4 id="areaOneResult"></h4>
+        </div>
+      </div>
+    </section>
+    <section id="outputContentTwo">
+      <div class="output">
+        <h3>Area of an equilateral triangle</h3>
+        <img src="/equilateral-triangle.png" alt="equilateral-triangle" />
+        <p>The formula to calculate the area of equilateral triangle is</p>
+        <h4>Formula: (√3)/4 × side <sup>2</sup></h4>
+        <form class="calcArea">
+          <input
+            type="number"
+            class="side values"
+            min="1"
+            required
+            placeholder="Enter side"
+          />
+          <button class="calcAreaTwo">Calculate</button>
+        </form>
+        <div>
+          <h4 id="areaTwoResult"></h4>
+        </div>
+      </div>
+    </section>
+    <section id="outputContentThree">
+      <div class="output">
+        <h3>Area of a triangle (with 3 different sides)</h3>
+        <img src="/scalene-triangle.png" alt="scalene-triangle" />
+        <p>
+          Area of triangle with 3 sides of different measures can be found using
+          Heron's formula:
+        </p>
+        <h4>
+          Formula: √( s(s-a)(s-b)(s-c) ) <br />
+          where , s is semi-perimeter of the triangle : s = (a+b+c) / 2
+        </h4>
+        <form class="calcArea">
+          <input
+            type="number"
+            class="sideOne"
+            min="1"
+            required
+            placeholder="sideOne value"
+          />
+          <input
+            type="number"
+            class="sideTwo"
+            min="1"
+            required
+            placeholder="sideTwo value"
+          />
+          <input
+            type="number"
+            class="sideThree"
+            min="1"
+            required
+            placeholder="sideThree value"
+          />
+          <button class="calcAreaThree">Calculate</button>
+        </form>
+        <div>
+          <h4 id="areaThreeResult"></h4>
+        </div>
+      </div>
+    </section>
+    <section id="outputContentFour">
+      <div class="output">
+        <h3>Area of a triangle (with 2 sides and one angle known)</h3>
+        <img src="/two-sides-one-angle-triangle.gif" alt="triangle" />
+        <p>
+          Area of triangle with 2 sides and an angle included between them known
+          can be found by:
+        </p>
+        <h4>
+          Formula: Area (∆ABC) = ½ bc sin A
+          <br />
+          where , b & c are sides of a triangle and ∠A is an angle between them.
+        </h4>
+
+        <form class="calcArea">
+          <input
+            type="number"
+            class="angleA value"
+            min="1"
+            max="180"
+            required
+            placeholder="Enter angle in degrees"
+          />
+
+          <input
+            type="number"
+            class="sideB value"
+            min="1"
+            required
+            placeholder="Enter side one value"
+          />
+
+          <input
+            type="number"
+            class="sideC value"
+            min="1"
+            required
+            placeholder="Enter side two value"
+          />
+          <button class="calcAreaFour" type="submit">Calculate</button>
+        </form>
+        <div>
+          <h4 id="areaFourResult"></h4>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-header">You can connect with me on</div>
+      <div class="social social-icons">
+        <a
+        target="_blank"
+        href="https://www.linkedin.com/in/vash-chauhan-b6222514b/"
+        ><i class="fab fa-linkedin-in fa-2x"></i
+      ></a>
+      <a target="_blank" href="https://twitter.com/VashnaviChauhan"
+        ><i class="fab fa-twitter fa-2x"></i
+      ></a>
+      <a target="_blank" href="https://github.com/vashnavichauhan1825"
+        ><i class="fab fa-github fa-2x"></i
+      ></a>
+       
+      </div>
+      <p>&copy; 2022| NEOCODER</p>
+    </footer>
+    <script src="calcArea.js"></script>
+  </body>
+</html>
